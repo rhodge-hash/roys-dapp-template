@@ -59,13 +59,17 @@ To get this project up and running on your local machine, follow these steps:
 
 ## Key Technologies
 
-*   **Frontend**: React, TypeScript, Vite, WebRTC (for screen sharing), UI libraries (e.g., Material-UI)
+*   **Frontend**: React, TypeScript, Vite, WebRTC (for screen sharing), UI libraries (e.g., Material-UI), **`next-themes` (for theme management)**
 *   **Backend**: Node.js, Express.js, TypeScript, WebSockets (Socket.IO)
 *   **AI Integration**: Placeholder for multimodal AI model integration
 *   **State Management**: Zustand
 *   **Styling**: Tailwind CSS, PostCSS
 *   **Routing**: React Router
 *   **Testing**: (Placeholder for E2E tests)
+
+## Dark Mode Implementation
+
+The application now supports a dark mode theme, providing a more comfortable viewing experience in low-light environments. This feature leverages `next-themes` for seamless theme switching and Tailwind CSS for styling. A toggle has been integrated into the header to allow users to switch between light, dark, and system themes.
 
 ## Project Structure
 

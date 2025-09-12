@@ -11,6 +11,8 @@ _Note: This is a sample changelog provided as a demonstration for how to structu
 
 ### Added
 
+- Dark mode implementation using `next-themes` and Tailwind CSS.
+- Theme toggle component in the header.
 - Initial setup for the new API integration.
 - New component `UserCard` for displaying user information.
 

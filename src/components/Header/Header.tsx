@@ -20,6 +20,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useResponsive } from '@/hooks/useResponsive';
+import { ModeToggle } from '@/components/ui/theme-toggle'; // Import ModeToggle
 
 const navigation = [
   {
@@ -122,6 +123,9 @@ const MobileNav = ({
             </div>
           ))}
         </nav>
+        <div className="absolute bottom-4 left-4"> {/* Added for mobile toggle */}
+          <ModeToggle />
+        </div>
       </SheetContent>
     </Sheet>
   );
@@ -182,6 +186,9 @@ export default function Header() {
         ) : (
           <DesktopNav />
         )}
+        <div className="ml-auto flex items-center space-x-4"> {/* Added for desktop toggle */}
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );

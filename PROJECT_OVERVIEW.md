@@ -44,3 +44,18 @@
 
 - [Meeting Notes](https://link-to-meeting-notes)
 - [API Documentation](https://link-to-api-docs)
+
+## Current Development Focus
+
+### UI/UX Redesign and Dark Mode Implementation
+
+The project is currently undergoing a significant UI/UX redesign, with a primary focus on implementing a dark mode theme. This involves:
+- Integration of `next-themes` for robust theme management.
+- Creation of a reusable theme toggle component.
+- Integration of the theme toggle into the application header.
+
+### Feature Development
+
+Ongoing development includes:
+- **Vibe Code**: Implementation of the AI Pair Programmer feature, including screen sharing and AI suggestion integration.
+- **Real-time Chat System**: Development of a real-time chat system with message history and user presence, leveraging WebSockets, PostgreSQL, and Redis.
