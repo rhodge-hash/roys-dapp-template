@@ -139,6 +139,9 @@ button {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300; /* Added transition-colors */
   }
 }
+
+/* TODO: Implement smooth transitions and animations for an enhanced user experience. */
+/* Consider adding animations for modals, toasts, and page transitions. */

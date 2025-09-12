@@ -22,6 +22,9 @@ const AISuggestions: React.FC = () => {
       setSuggestions((prevSuggestions) => [...prevSuggestions, suggestion]);
     });
 
+    // TODO: Integrate with backend API for sending user feedback on suggestions (POST /api/suggestion/{suggestionId}/feedback)
+    // TODO: Refine UI to allow users to accept/reject/modify suggestions
+
     return () => {
       socket.disconnect();
     };

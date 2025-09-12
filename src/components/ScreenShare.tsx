@@ -16,6 +16,9 @@ const ScreenShare: React.FC = () => {
       console.log(message);
     });
 
+    // TODO: Further integrate with backend APIs for session management (e.g., sending session ID with frames)
+    // TODO: Handle different types of screen share events (e.g., pause, resume, quality changes)
+
     return () => {
       socket.disconnect();
     };
@@ -35,11 +38,7 @@ const ScreenShare: React.FC = () => {
       mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) {
           // Performance Optimization: Consider optimizing image compression/resolution here
-          const reader = new FileReader();
-          reader.onload = () => {
-            socket.emit('screen-frame', reader.result); // Send base64 encoded frame
-          };
-          reader.readAsDataURL(event.data);
+          socket.emit('screen-frame', event.data); // Send Blob directly, backend can handle
         }
       };
       mediaRecorder.start(1000); // Send data every 1 second

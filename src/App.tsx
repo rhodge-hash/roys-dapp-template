@@ -1,14 +1,11 @@
 import React from 'react';
-import ScreenShare from './components/ScreenShare';
-import AISuggestions from './components/AISuggestions';
+import AppRouter from './AppRouter'; // Import AppRouter
 
 function App() {
   return (
     <div className="App">
-      <h1>Vibe Code Application</h1>
       {/* Future UI/UX: Ensure responsiveness across various screen sizes */}
-      <ScreenShare />
-      <AISuggestions />
+      <AppRouter /> {/* Render AppRouter */}
     </div>
   );
 }

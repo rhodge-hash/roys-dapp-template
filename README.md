@@ -149,6 +149,8 @@ As part of the Frontend Redesign Overhaul - Phase 2, the existing UI components 
 │   ├───hooks/
 │   ├───lib/
 │   ├───pages/
+│   │   ├───VibeCodeSession/ # New: Page for Vibe Code session
+│   │   └───Chat/            # New: Page for Chat interface
 │   ├───services/        
 │   ├───store/
 │   └───types/
@@ -167,3 +169,12 @@ As part of the Frontend Redesign Overhaul - Phase 2, the existing UI components 
 ## Spec-Driven Development
 
 This project utilizes a Spec-Driven Development workflow. Both the "Vibe Code" and "Real-time Chat System" features were developed using this approach, emphasizing clear, detailed specifications and plans before implementation, ensuring alignment and a structured development process. The `specs/` directory contains all the artifacts generated during this process for each feature.
+
+## Feature Integration & UI Implementation
+
+As part of the Frontend Redesign Overhaul - Phase 3, the core UI components for Vibe Code and Real-time Chat have been integrated into dedicated pages and routing. This involved:
+- Creating `src/pages/VibeCodeSession/VibeCodeSession.tsx` to encapsulate Vibe Code UI.
+- Creating `src/pages/Chat/ChatPage.tsx` to encapsulate Chat UI.
+- Updating `src/AppRouter.tsx` to include routes for these new pages.
+- Initial integration of backend APIs and WebSockets for both features into the new UI components.
+- Adding basic smooth transitions and animations (via `transition-colors` on body).
