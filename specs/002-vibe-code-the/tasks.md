@@ -4,7 +4,7 @@
 
 ## Setup Tasks
 
-- **T001**: Initialize Frontend React Project.
+- **T001**: Initialize Frontend React Project. (SKIPPED - Frontend already initialized)
   - **Description**: Set up a new React project with TypeScript.
   - **File Path**: `src/`
   - **Dependencies**: None
