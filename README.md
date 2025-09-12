@@ -103,14 +103,21 @@ To get this project up and running on your local machine, follow these steps:
 
 ## Key Technologies
 
-*   **Frontend**: React, TypeScript, Vite, WebRTC (for screen sharing), UI libraries (e.g., Material-UI), `next-themes` (for theme management), Socket.IO Client
+*   **Frontend**: React, TypeScript, Vite, WebRTC (for screen sharing), UI libraries (e.g., Material-UI), `next-themes` (for theme management), Socket.IO Client, **Refined UI Components (Buttons, Checkboxes, Dialogs, Inputs, Navigation, Sheets, Toasts)**
 *   **Backend (Vibe Code)**: Node.js, Express.js, TypeScript, WebSockets (Socket.IO)
 *   **Backend (Chat System)**: Node.js, Express.js, TypeScript, WebSockets (Socket.IO), PostgreSQL, Redis
 *   **AI Integration**: Placeholder for multimodal AI model integration
 *   **State Management**: Zustand
-*   **Styling**: Tailwind CSS, PostCSS
+*   **Styling**: Tailwind CSS, PostCSS, **Refined Color Palette and Typography**
 *   **Routing**: React Router
 *   **Testing**: (Placeholder for E2E tests)
+
+## UI Component Refinement
+
+As part of the Frontend Redesign Overhaul - Phase 2, the existing UI components (`button.tsx`, `checkbox.tsx`, `dialog.tsx`, `dropdown-menu.tsx`, `input.tsx`, `navigation-menu.tsx`, `sheet.tsx`, `sonner.tsx`) have been refined to align with the new design system. This involved:
+- Adjusting colors, shadows, and focus states to match the refined color palette and aesthetic.
+- Ensuring consistency in border radius and typography.
+- Confirming responsiveness across various screen sizes.
 
 ## Project Structure
 

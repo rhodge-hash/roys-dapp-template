@@ -11,14 +11,14 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           toast:
-            'group toast group-[.toaster]:border! group-[.toaster]:shadow-lg!',
+            'group toast group-[.toaster]:border! group-[.toaster]:shadow-xl! group-[.toaster]:bg-background! group-[.toaster]:text-foreground!', // Changed shadow-lg to shadow-xl, added bg-background and text-foreground
           error:
-            'group-[.toaster]:bg-[#f00]! group-[.toaster]:text-white! group-[.toaster]:border-none! ',
+            'group-[.toaster]:bg-destructive! group-[.toaster]:text-destructive-foreground! group-[.toaster]:border-destructive!', // Used CSS variables
           success:
-            'group-[.toaster]:bg-[#00BF50]! group-[.toaster]:text-white! group-[.toaster]:border-none!',
+            'group-[.toaster]:bg-primary! group-[.toaster]:text-primary-foreground! group-[.toaster]:border-primary!', // Used CSS variables (assuming primary for success)
           warning:
-            'group-[.toaster]:bg-[hsl(49,100%,97%)]! group-[.toaster]:text-[hsl(31,92%,45%)]! group-[.toaster]:border-[hsl(49,91%,91%)]!',
-          info: 'group-[.toaster]:bg-[hsl(208,100%,97%)]! group-[.toaster]:text-[hsl(210,92%,45%)]! group-[.toaster]:border-[hsl(221,91%,91%)]!',
+            'group-[.toaster]:bg-yellow-500! group-[.toaster]:text-yellow-900! group-[.toaster]:border-yellow-500!', // Using Tailwind classes for now, ideally map to CSS vars
+          info: 'group-[.toaster]:bg-blue-500! group-[.toaster]:text-blue-900! group-[.toaster]:border-blue-500!', // Using Tailwind classes for now, ideally map to CSS vars
           description: 'group-[.toast]:text-muted-foreground',
           actionButton:
             'group-[.toast]:bg-primary group-[.toast]:text-primary-foreground font-medium',

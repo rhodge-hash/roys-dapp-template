@@ -28,6 +28,8 @@ _Note: This is a sample changelog provided as a demonstration for how to structu
 
 ### Changed
 
+- Refined core UI components (Button, Checkbox, Dialog, Input, Navigation Menu, Sheet, Sonner) to align with new design system, including updated colors, shadows, focus states, and responsiveness.
+
 - Updated `Button` component to support new color schemes.
 - Improved performance of the data fetching mechanism using `@tanstack/react-query`.
 
