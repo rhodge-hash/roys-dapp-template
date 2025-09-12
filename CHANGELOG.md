@@ -23,6 +23,8 @@ _Note: This is a sample changelog provided as a demonstration for how to structu
 
 ### Fixed
 
+- Build failure due to missing `@radix-ui/react-dropdown-menu` dependency and `dropdown-menu.tsx` component.
+
 - Fixed an issue where the form submission failed on slow networks.
 
 ## [0.1.0] - 2024-09-04

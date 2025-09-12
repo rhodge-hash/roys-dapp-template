@@ -39,6 +39,8 @@ To get this project up and running on your local machine, follow these steps:
     cd ..
     ```
 
+    *Note: Ensure all UI component dependencies, such as `@radix-ui/react-dropdown-menu`, are correctly installed.*
+
 ### Running the Application
 
 1.  **Start the Backend Server:**
