@@ -11,6 +11,11 @@ _Note: This is a sample changelog provided as a demonstration for how to structu
 
 ### Added
 
+- Real-time Chat System with message history and user presence.
+- Backend services for chat (WebSocket, PostgreSQL, Redis integration).
+- Frontend UI components for chat list and chat window.
+- Docker Compose setup for PostgreSQL and Redis.
+
 - Dark mode implementation using `next-themes` and Tailwind CSS.
 - Theme toggle component in the header.
 - Initial setup for the new API integration.
