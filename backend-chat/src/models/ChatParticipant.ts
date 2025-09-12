@@ -1,0 +1,1 @@
+// ChatParticipant model definition

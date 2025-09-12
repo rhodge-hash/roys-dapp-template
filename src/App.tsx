@@ -1,1 +1,1 @@
-// Frontend-backend integration
+// Frontend-backend chat integration

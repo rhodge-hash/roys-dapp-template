@@ -1,0 +1,1 @@
+// Test for user presence updates via WebSocket
