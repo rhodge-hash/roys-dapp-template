@@ -118,3 +118,34 @@ To get this project up and running on your local machine, follow these steps:
 ## Spec-Driven Development
 
 This "Vibe Code" feature was developed using a Spec-Driven Development workflow. This approach emphasizes clear, detailed specifications and plans before implementation, ensuring alignment and a structured development process. The `specs/002-vibe-code-the/` directory contains all the artifacts generated during this process.
+
+## Real-time Chat System
+
+A new feature, "Real-time Chat System," has been added to enable instant communication within the application. This system provides real-time messaging, message history, and user presence indicators.
+
+### Key Technologies for Chat System
+
+*   **Real-time Communication**: WebSockets (Socket.IO)
+*   **Database (Message History)**: PostgreSQL
+*   **Caching/Presence**: Redis
+*   **Backend**: Node.js/Express (or Python/FastAPI)
+*   **Frontend**: React
+
+### Project Structure Updates
+
+```
+.
+├───backend-chat/        # New: Node.js/Express backend for the chat system
+│   ├───src/             # Chat backend source code
+│   │   ├───config/      # Database and Redis connection configurations
+│   │   ├───db/          # Database repositories for User, Chat, Message, ChatParticipant
+│   │   ├───middleware/  # Authentication middleware for chat
+│   │   ├───models/      # Data model definitions for chat entities
+│   │   ├───routes/      # REST API endpoints for chat (create chat, message history)
+│   │   ├───services/    # User presence service
+│   │   └───websockets/  # WebSocket handlers for chat and presence
+│   ├───tests/           # Backend tests for chat system
+│   ├───package.json
+│   └───tsconfig.json
+├───docker-compose.yml   # New: Docker Compose for PostgreSQL and Redis
+```
