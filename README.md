@@ -1,103 +1,120 @@
 # React DApp Starter
 
-![TypeScript](https://img.shields.io/badge/language-typescript-%233178c6.svg)
+This project serves as a starter template for building decentralized applications (DApps) with React. It provides a foundational structure and integrates essential tools and practices for modern web development.
 
-## Overview
+## Vibe Code: The AI Pair Programmer That Sees Everything
 
-`react-dapp-starter` is a robust and scalable template designed for building decentralized applications (DApps) with modern web technologies. This template is a production-ready foundation currently used in [Manta Network](https://manta.network/), designed to meet the demands of complex and scalable DApp development.
+A significant new feature, "Vibe Code," has been integrated into this application. Vibe Code aims to be a next-generation collaborative coding environment where developers can work with a multimodal AI assistant that "sees" their screens to provide real-time, contextual assistance.
 
-## Features
+## Project Setup and Running
 
-- **[TypeScript](https://www.typescriptlang.org/)**: Strongly-typed language that builds on JavaScript, giving you better tooling at any scale.
-- **[React Router](https://reactrouter.com/)**: A declarative routing library for React that makes it easy to navigate your app.
-- **[TailwindCSS](https://tailwindcss.com/)**: Utility-first CSS framework for rapid UI development.
-- **[Web3Modal](https://docs.walletconnect.com/appkit/react/core/installation)**: An easy-to-use library for integrating multiple wallet providers.
-- **[Reown](https://reown.com/)**: The toolkit to build onchain app UX.
-- **[Wagmi](https://wagmi.sh/)**: A set of React Hooks for working with Ethereum.
-- **[Viem](https://viem.sh/)**: A toolkit for handling Ethereum-related data and logic.
-- **[Shadcn UI](https://ui.shadcn.com/)**: A collection of pre-built UI components for a fast and consistent development experience.
-- **[Zustand](https://github.com/pmndrs/zustand)**: A small, fast, and scalable state management solution for React.
-- **[TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview)**: Powerful data fetching, caching, and synchronization for server state management.
-- **ESLint & Prettier**: Code quality and formatting tools to ensure a clean codebase.
+To get this project up and running on your local machine, follow these steps:
 
-## Getting Started
+### Prerequisites
 
-1. **Clone the repository:**
+*   Node.js (v18 or higher)
+*   npm or yarn
 
-   You can use a tool like [degit](https://github.com/Rich-Harris/degit) to scaffold your project with this template.
+### Installation
 
-   ```bash
-   npx degit Manta-Network/react-dapp-starter#main your-project
-   cd your-project
-   ```
+1.  **Clone the repository:**
+    ```bash
+    git clone [YOUR_REPOSITORY_URL]
+    cd react-dapp-starter
+    ```
 
-2. **Install dependencies (default: yarn):**
+2.  **Install Frontend Dependencies:**
+    ```bash
+    cd src
+    npm install
+    # or yarn install
+    cd ..
+    ```
 
-   ```bash
-   yarn install
-   ```
+3.  **Install Backend Dependencies:**
+    ```bash
+    cd backend
+    npm install
+    # or yarn install
+    cd ..
+    ```
 
-3. **Configure WalletConnect Project ID and Metadata:**
+### Running the Application
 
-   - Visit [Reown Cloud](https://cloud.reown.com/?utm_source=cloud_banner&utm_medium=docs&utm_campaign=backlinks&_gl=1*1fv6aj9*_ga*MjA2ODU1MTAwMS4xNzMzNzI3OTM5*_ga_X117BZWK4X*MTc0MTg1MDU3MC45LjEuMTc0MTg1MjIyMi4wLjAuMA..) to create a project and obtain your `Project ID`.
-   - Open the file `src/config/common.ts` in your project.
-   - Locate the `WALLET_CONNECT_PROJECT_ID` key and replace `YOUR_PROJECT_ID` with your actual `Project ID`.
-   - Update the `WALLET_CONNECT_METADATA` section with your project's details, including the name, description, URL, and icons.
+1.  **Start the Backend Server:**
+    ```bash
+    cd backend
+    npm start # or a similar command defined in backend/package.json
+    cd ..
+    ```
 
-4. **Run the development server:**
+2.  **Start the Frontend Development Server:**
+    ```bash
+    cd src
+    npm run dev # or yarn dev
+    cd ..
+    ```
 
-   ```bash
-   yarn dev
-   ```
+3.  Open your browser and navigate to `http://localhost:3000` (or the port specified by Vite).
 
-5. **Build for production:**
+## Key Technologies
 
-   ```bash
-   yarn build
-   ```
+*   **Frontend**: React, TypeScript, Vite, WebRTC (for screen sharing), UI libraries (e.g., Material-UI)
+*   **Backend**: Node.js, Express.js, TypeScript, WebSockets (Socket.IO)
+*   **AI Integration**: Placeholder for multimodal AI model integration
+*   **State Management**: Zustand
+*   **Styling**: Tailwind CSS, PostCSS
+*   **Routing**: React Router
+*   **Testing**: (Placeholder for E2E tests)
 
 ## Project Structure
 
-```plaintext
-├── src/
-│ ├── abis/ # Smart contract ABIs
-│ ├── api/ # Optional API endpoints definitions
-│ ├── assets/ # Static assets like images and fonts
-│ ├── components/ # Reusable UI components
-│ ├── config/ # Application configuration files
-│ ├── hooks/ # Custom React hooks
-│ ├── lib/ # Utility functions and business logic
-│ ├── pages/ # Application pages
-│ ├── store/ # Global state management using Zustand
-│ ├── types/ # TypeScript types
-│ ├── AppRouter.tsx # Application routing
-│ ├── index.css # Global styles
-│ ├── main.tsx # Main entry point
-│ └── vite-env.d.ts # Vite environment variables types
-├── public/ # Static public assets
-├── .gitignore # Git ignore file
-├── .prettierrc # Prettier configuration
-├── CHANGELOG.md # Project changelog
-├── components.json # Shadcn UI components configuration
-├── eslintrc.config.js # ESLint configuration
-├── index.html # Main HTML file
-├── package.json # Project metadata and dependencies
-├── postcss.config.js # PostCSS configuration
-├── PROJECT_OVERVIEW.md # Overview of the project
-├── README.md # Project README
-├── tailwind.config.js # Tailwind CSS configuration
-├── tsconfig.app.json # App TypeScript configuration
-├── tsconfig.json # TypeScript configuration
-├── tsconfig.node.json # Node.js TypeScript configuration
-├── vercel.json # Vercel deployment configuration
-├── vite.config.ts # Vite configuration
-└── yarn.lock # Yarn lock file
+```
+.
+├───backend/             # New: Node.js/Express backend for AI processing and APIs
+│   ├───src/             # Backend source code
+│   │   ├───middleware/  # Authentication and authorization middleware
+│   │   ├───models/      # Data model definitions (DeveloperSession, ScreenFrame, etc.)
+│   │   ├───routes/      # API endpoints (session management, feedback)
+│   │   ├───services/    # AI integration service
+│   │   └───websockets/  # WebSocket servers (screen sharing, AI suggestions)
+│   ├───tests/           # Backend tests (unit, API, WebSocket)
+│   ├───package.json
+│   └───tsconfig.json
+├───e2e/                 # New: End-to-end tests for the application
+├───public/              # Static assets
+├───src/                 # React Frontend application
+│   ├───AppRouter.tsx
+│   ├───components/      # React components (Header, UI, ScreenShare, AISuggestions)
+│   │   ├───Header/
+│   │   └───ui/
+│   │   ├───ScreenShare.tsx # New: Frontend screen capture and transmission
+│   │   └───AISuggestions.tsx # New: Frontend AI suggestion display
+│   ├───config/
+│   ├───hooks/
+│   ├───lib/
+│   ├───pages/
+│   ├───services/        # New: Frontend services (e.g., authentication)
+│   ├───store/
+│   └───types/
+├───specs/               # Spec-Driven Development artifacts
+│   └───002-vibe-code-the/ # Feature-specific documentation
+│       ├───spec.md      # Feature specification
+│       ├───plan.md      # Implementation plan
+│       ├───tasks.md     # Detailed executable tasks
+│       ├───research.md  # Research findings
+│       ├───data-model.md # Data model details
+│       ├───quickstart.md # Feature-specific quickstart
+│       └───contracts/   # API contract definitions
+├───.gitignore
+├───package.json         # Root package.json for overall project
+├───postcss.config.js
+├───README.md            # This file
+├───tsconfig.json
+├───vite.config.ts
+└───yarn.lock
 ```
 
-## Contributing
+## Spec-Driven Development
 
-Contributions are welcome! Please create an issue or submit a pull request if you find any bugs or have suggestions for improvements.
-
-## Acknowledgements
-
-Special thanks to the open-source community and the maintainers of the libraries and tools used in this template.
+This "Vibe Code" feature was developed using a Spec-Driven Development workflow. This approach emphasizes clear, detailed specifications and plans before implementation, ensuring alignment and a structured development process. The `specs/002-vibe-code-the/` directory contains all the artifacts generated during this process.

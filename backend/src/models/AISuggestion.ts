@@ -1,0 +1,1 @@
+// AISuggestion model definition
