@@ -38,6 +38,8 @@ const ScreenShare: React.FC = () => {
       mediaRecorder.ondataavailable = (event) => {
         if (event.data.size > 0) {
           // Performance Optimization: Consider optimizing image compression/resolution here
+          // TODO: Optimize screen frame transmission for various network conditions.
+          // TODO: Ensure cross-browser compatibility for MediaRecorder and getDisplayMedia.
           socket.emit('screen-frame', event.data); // Send Blob directly, backend can handle
         }
       };

@@ -93,7 +93,7 @@ const MobileNav = ({
                 <Link
                   to={item.href}
                   className={cn(
-                    'text-lg font-medium',
+                    'text-lg font-medium py-2',
                     location.pathname === item.href && 'text-primary'
                   )}
                   onClick={() => onOpenChange(false)}
@@ -101,7 +101,7 @@ const MobileNav = ({
                   {item.title}
                 </Link>
               ) : (
-                <div className="text-lg font-medium">{item.title}</div>
+                <div className="text-lg font-medium py-2">{item.title}</div>
               )}
               {item.children && (
                 <div className="space-y-2 pl-4">
@@ -110,7 +110,7 @@ const MobileNav = ({
                       key={child.title}
                       to={child.href}
                       className={cn(
-                        'text-muted-foreground hover:text-primary block',
+                        'text-muted-foreground hover:text-primary block py-2',
                         location.pathname === child.href && 'text-primary'
                       )}
                       onClick={() => onOpenChange(false)}

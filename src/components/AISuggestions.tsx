@@ -19,6 +19,7 @@ const AISuggestions: React.FC = () => {
 
     socket.on('ai-suggestion', (suggestion: AISuggestion) => {
       console.log('Received AI suggestion:', suggestion);
+      // TODO: Optimize rendering of large number of suggestions for performance.
       setSuggestions((prevSuggestions) => [...prevSuggestions, suggestion]);
     });
 

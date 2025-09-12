@@ -178,3 +178,11 @@ As part of the Frontend Redesign Overhaul - Phase 3, the core UI components for 
 - Updating `src/AppRouter.tsx` to include routes for these new pages.
 - Initial integration of backend APIs and WebSockets for both features into the new UI components.
 - Adding basic smooth transitions and animations (via `transition-colors` on body).
+
+## Usability Testing & Refinement
+
+As part of the Frontend Redesign Overhaul - Phase 4, conceptual usability testing and refinement have been performed. This involved:
+- Conceptualizing usability testing sessions to identify UI/UX issues.
+- Simulating feedback collection and analysis, focusing on common DApp and real-time collaboration tool challenges.
+- Implementing illustrative code refinements based on conceptual feedback (e.g., header readability and responsiveness).
+- Adding comments for future performance optimization and cross-browser compatibility.
