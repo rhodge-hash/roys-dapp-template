@@ -11,6 +11,11 @@ _Note: This is a sample changelog provided as a demonstration for how to structu
 
 ### Added
 
+- Vibe Code: AI Pair Programmer feature implementation.
+- Screen sharing functionality.
+- AI suggestion display and integration.
+- Session management and user feedback APIs.
+
 - Real-time Chat System with message history and user presence.
 - Backend services for chat (WebSocket, PostgreSQL, Redis integration).
 - Frontend UI components for chat list and chat window.
