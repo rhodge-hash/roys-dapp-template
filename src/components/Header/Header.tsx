@@ -20,6 +20,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useResponsive } from '@/hooks/useResponsive';
+import { ModeToggle } from '@/components/ui/theme-toggle'; // Import ModeToggle
 
 const navigation = [
   {
@@ -92,7 +93,7 @@ const MobileNav = ({
                 <Link
                   to={item.href}
                   className={cn(
-                    'text-lg font-medium',
+                    'text-lg font-medium py-2',
                     location.pathname === item.href && 'text-primary'
                   )}
                   onClick={() => onOpenChange(false)}
@@ -100,7 +101,7 @@ const MobileNav = ({
                   {item.title}
                 </Link>
               ) : (
-                <div className="text-lg font-medium">{item.title}</div>
+                <div className="text-lg font-medium py-2">{item.title}</div>
               )}
               {item.children && (
                 <div className="space-y-2 pl-4">
@@ -109,7 +110,7 @@ const MobileNav = ({
                       key={child.title}
                       to={child.href}
                       className={cn(
-                        'text-muted-foreground hover:text-primary block',
+                        'text-muted-foreground hover:text-primary block py-2',
                         location.pathname === child.href && 'text-primary'
                       )}
                       onClick={() => onOpenChange(false)}
@@ -122,6 +123,9 @@ const MobileNav = ({
             </div>
           ))}
         </nav>
+        <div className="absolute bottom-4 left-4"> {/* Added for mobile toggle */}
+          <ModeToggle />
+        </div>
       </SheetContent>
     </Sheet>
   );
@@ -182,6 +186,9 @@ export default function Header() {
         ) : (
           <DesktopNav />
         )}
+        <div className="ml-auto flex items-center space-x-4"> {/* Added for desktop toggle */}
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );

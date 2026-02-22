@@ -11,15 +11,40 @@ _Note: This is a sample changelog provided as a demonstration for how to structu
 
 ### Added
 
+- Feature Integration & UI Implementation (Frontend Redesign Phase 3).
+- Dedicated pages for Vibe Code Session (`src/pages/VibeCodeSession/VibeCodeSession.tsx`) and Chat (`src/pages/Chat/ChatPage.tsx`).
+- Initial integration of backend APIs and WebSockets into new UI components.
+- Basic smooth transitions and animations.
+
+- Vibe Code: AI Pair Programmer feature implementation.
+- Screen sharing functionality.
+- AI suggestion display and integration.
+- Session management and user feedback APIs.
+
+- Real-time Chat System with message history and user presence.
+- Backend services for chat (WebSocket, PostgreSQL, Redis integration).
+- Frontend UI components for chat list and chat window.
+- Docker Compose setup for PostgreSQL and Redis.
+
+- Dark mode implementation using `next-themes` and Tailwind CSS.
+- Theme toggle component in the header.
 - Initial setup for the new API integration.
 - New component `UserCard` for displaying user information.
 
 ### Changed
 
+- Performed conceptual usability testing and refinement (Frontend Redesign Phase 4).
+- Implemented illustrative code refinements based on conceptual feedback (e.g., header readability and responsiveness).
+- Added comments for future performance optimization and cross-browser compatibility.
+
+- Refined core UI components (Button, Checkbox, Dialog, Input, Navigation Menu, Sheet, Sonner) to align with new design system, including updated colors, shadows, focus states, and responsiveness.
+
 - Updated `Button` component to support new color schemes.
 - Improved performance of the data fetching mechanism using `@tanstack/react-query`.
 
 ### Fixed
+
+- Build failure due to missing `@radix-ui/react-dropdown-menu` dependency and `dropdown-menu.tsx` component.
 
 - Fixed an issue where the form submission failed on slow networks.
 

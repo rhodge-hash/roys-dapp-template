@@ -10,15 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+          "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:ring-primary/50", // Changed shadow-xs to shadow-sm, added focus-visible:ring-primary/50
         destructive:
-          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
+          "bg-destructive text-white shadow-sm hover:bg-destructive/90 focus-visible:ring-destructive/50", // Changed shadow-xs to shadow-sm, adjusted focus-visible:ring
         outline:
-          "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground focus-visible:ring-accent/50", // Changed shadow-xs to shadow-sm, added focus-visible:ring-accent/50
         secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 focus-visible:ring-secondary/50", // Changed shadow-xs to shadow-sm, added focus-visible:ring-secondary/50
+        ghost: "hover:bg-accent hover:text-accent-foreground focus-visible:ring-accent/50", // Added focus-visible:ring-accent/50
+        link: "text-primary underline-offset-4 hover:underline focus-visible:ring-primary/50", // Added focus-visible:ring-primary/50
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",

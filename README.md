@@ -1,151 +1,216 @@
-# React DApp Starter
+<a id="readme-top"></a>
 
-This project serves as a starter template for building decentralized applications (DApps) with React. It provides a foundational structure and integrates essential tools and practices for modern web development.
+<!-- SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 
-## Vibe Code: The AI Pair Programmer That Sees Everything
+<br />
+<div align="center">
+  <a href="https://github.com/rhodge-hash/roys-dapp-template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Roys DApp Template</h3>
+  <p align="center">
+    A modern React template for rapidly building decentralized applications (DApps) with collaborative AI and real-time chat.
+    <br />
+    <a href="https://github.com/rhodge-hash/roys-dapp-template"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://github.com/rhodge-hash/roys-dapp-template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/rhodge-hash/roys-dapp-template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
-A significant new feature, "Vibe Code," has been integrated into this application. Vibe Code aims to be a next-generation collaborative coding environment where developers can work with a multimodal AI assistant that "sees" their screens to provide real-time, contextual assistance.
+---
 
-## Project Setup and Running
+## 🚀 Overview
 
-To get this project up and running on your local machine, follow these steps:
+**Roys DApp Template** jumpstarts your next decentralized web project with React, TypeScript, Vite, and modern UI/UX practices. It features integrated collaborative coding (Vibe Code), real-time chat, and dark mode, making it a powerful starting point for building robust DApps.
+
+## 🏆 Main Features
+
+- **Vibe Code**: AI-powered collaborative coding environment with screen sharing, suggestion display, and session management.
+- **Real-time Chat**: Instant messaging, message history, and user presence indicators using WebSockets, PostgreSQL, and Redis.
+- **Dark Mode**: Seamless theme switching with Tailwind CSS and next-themes.
+- **Refined UI Components**: Modern, responsive, and accessible UI elements.
+
+## 📦 Built With
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Socket.IO](https://socket.io/)
+- [Express.js](https://expressjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Redis](https://redis.io/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Radix UI](https://www.radix-ui.com/)
+
+---
+
+## 📖 Table of Contents
+
+- [Overview](#overview)
+- [Main Features](#main-features)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Spec-Driven Development](#spec-driven-development)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## 🛠️ Getting Started
 
 ### Prerequisites
 
-*   Node.js (v18 or higher)
-*   npm or yarn
+- Node.js (v18+)
+- npm or yarn
+- Docker (for PostgreSQL and Redis)
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [YOUR_REPOSITORY_URL]
-    cd react-dapp-starter
-    ```
+```bash
+# Clone the repo
+git clone https://github.com/rhodge-hash/roys-dapp-template.git
+cd roys-dapp-template
 
-2.  **Install Frontend Dependencies:**
-    ```bash
-    cd src
-    npm install
-    # or yarn install
-    cd ..
-    ```
+# Install Frontend dependencies
+cd src
+npm install
+cd ..
 
-3.  **Install Backend Dependencies:**
-    ```bash
-    cd backend
-    npm install
-    # or yarn install
-    cd ..
-    ```
+# Install Backend dependencies
+cd backend
+npm install
+cd ..
+
+cd backend-chat
+npm install
+cd ..
+```
 
 ### Running the Application
 
-1.  **Start the Backend Server:**
-    ```bash
-    cd backend
-    npm start # or a similar command defined in backend/package.json
-    cd ..
-    ```
+```bash
+# Start Docker services
+docker-compose up -d postgres redis
 
-2.  **Start the Frontend Development Server:**
-    ```bash
-    cd src
-    npm run dev # or yarn dev
-    cd ..
-    ```
+# Start Vibe Code Backend
+cd backend
+npm start
+cd ..
 
-3.  Open your browser and navigate to `http://localhost:3000` (or the port specified by Vite).
+# Start Chat System Backend
+cd backend-chat
+npm start
+cd ..
 
-## Key Technologies
+# Start Frontend
+cd src
+npm run dev
+```
 
-*   **Frontend**: React, TypeScript, Vite, WebRTC (for screen sharing), UI libraries (e.g., Material-UI)
-*   **Backend**: Node.js, Express.js, TypeScript, WebSockets (Socket.IO)
-*   **AI Integration**: Placeholder for multimodal AI model integration
-*   **State Management**: Zustand
-*   **Styling**: Tailwind CSS, PostCSS
-*   **Routing**: React Router
-*   **Testing**: (Placeholder for E2E tests)
+Visit [`http://localhost:3000`](http://localhost:3000) in your browser.
 
-## Project Structure
+---
+
+## 💡 Usage
+
+- **Vibe Code Sessions**: Start a collaborative coding session and share your screen. See `src/pages/VibeCodeSession/`.
+- **Chat**: Use the real-time chat for project collaboration. See `src/pages/Chat/`.
+- **Theme Switcher**: Toggle dark/light mode from the UI.
+
+For more examples, refer to the [Documentation](https://github.com/rhodge-hash/roys-dapp-template/wiki).
+
+---
+
+## 📁 Project Structure
 
 ```
 .
-├───backend/             # New: Node.js/Express backend for AI processing and APIs
-│   ├───src/             # Backend source code
-│   │   ├───middleware/  # Authentication and authorization middleware
-│   │   ├───models/      # Data model definitions (DeveloperSession, ScreenFrame, etc.)
-│   │   ├───routes/      # API endpoints (session management, feedback)
-│   │   ├───services/    # AI integration service
-│   │   └───websockets/  # WebSocket servers (screen sharing, AI suggestions)
-│   ├───tests/           # Backend tests (unit, API, WebSocket)
-│   ├───package.json
-│   └───tsconfig.json
-├───e2e/                 # New: End-to-end tests for the application
-├───public/              # Static assets
-├───src/                 # React Frontend application
-│   ├───AppRouter.tsx
-│   ├───components/      # React components (Header, UI, ScreenShare, AISuggestions)
-│   │   ├───Header/
-│   │   └───ui/
-│   │   ├───ScreenShare.tsx # New: Frontend screen capture and transmission
-│   │   └───AISuggestions.tsx # New: Frontend AI suggestion display
-│   ├───config/
-│   ├───hooks/
-│   ├───lib/
-│   ├───pages/
-│   ├───services/        # New: Frontend services (e.g., authentication)
-│   ├───store/
-│   └───types/
-├───specs/               # Spec-Driven Development artifacts
-│   └───002-vibe-code-the/ # Feature-specific documentation
-│       ├───spec.md      # Feature specification
-│       ├───plan.md      # Implementation plan
-│       ├───tasks.md     # Detailed executable tasks
-│       ├───research.md  # Research findings
-│       ├───data-model.md # Data model details
-│       ├───quickstart.md # Feature-specific quickstart
-│       └───contracts/   # API contract definitions
-├───.gitignore
-├───package.json         # Root package.json for overall project
-├───postcss.config.js
-├───README.md            # This file
-├───tsconfig.json
-├───vite.config.ts
-└───yarn.lock
+├── backend/         # Vibe Code backend (AI, APIs)
+├── backend-chat/    # Chat backend
+├── docker-compose.yml
+├── src/             # React frontend
+│   ├── components/
+│   ├── pages/
+│   │   ├── VibeCodeSession/
+│   │   └── Chat/
+│   └── ...
+├── specs/           # Spec-Driven Development artifacts
+├── e2e/             # End-to-end tests
+├── public/          # Static assets
+├── README.md
+└── ...
 ```
 
-## Spec-Driven Development
+---
 
-This "Vibe Code" feature was developed using a Spec-Driven Development workflow. This approach emphasizes clear, detailed specifications and plans before implementation, ensuring alignment and a structured development process. The `specs/002-vibe-code-the/` directory contains all the artifacts generated during this process.
+## 📝 Spec-Driven Development
 
-## Real-time Chat System
+Features are planned and built using detailed specifications found in the `specs/` directory. This ensures clarity and consistency throughout the development lifecycle.
 
-A new feature, "Real-time Chat System," has been added to enable instant communication within the application. This system provides real-time messaging, message history, and user presence indicators.
+---
 
-### Key Technologies for Chat System
+## 🤝 Contributing
 
-*   **Real-time Communication**: WebSockets (Socket.IO)
-*   **Database (Message History)**: PostgreSQL
-*   **Caching/Presence**: Redis
-*   **Backend**: Node.js/Express (or Python/FastAPI)
-*   **Frontend**: React
+Contributions are welcome! Please fork the repo and submit a pull request.
 
-### Project Structure Updates
-
+```bash
+# Fork the repo
+# Create a feature branch
+git checkout -b feature/AmazingFeature
+# Commit and push
+git commit -m "Add AmazingFeature"
+git push origin feature/AmazingFeature
 ```
-.
-├───backend-chat/        # New: Node.js/Express backend for the chat system
-│   ├───src/             # Chat backend source code
-│   │   ├───config/      # Database and Redis connection configurations
-│   │   ├───db/          # Database repositories for User, Chat, Message, ChatParticipant
-│   │   ├───middleware/  # Authentication middleware for chat
-│   │   ├───models/      # Data model definitions for chat entities
-│   │   ├───routes/      # REST API endpoints for chat (create chat, message history)
-│   │   ├───services/    # User presence service
-│   │   └───websockets/  # WebSocket handlers for chat and presence
-│   ├───tests/           # Backend tests for chat system
-│   ├───package.json
-│   └───tsconfig.json
-├───docker-compose.yml   # New: Docker Compose for PostgreSQL and Redis
-```
+
+Open a [Pull Request](https://github.com/rhodge-hash/roys-dapp-template/pulls).
+
+---
+
+## 📜 License
+
+Distributed under the MIT License. See [`LICENSE.txt`](https://github.com/rhodge-hash/roys-dapp-template/blob/main/LICENSE.txt) for details.
+
+---
+
+## 📬 Contact
+
+Roy Hodge  
+[@RoyHodge](https://twitter.com/twitter_handle)  
+rhodge@email.com
+
+Project Link: [https://github.com/rhodge-hash/roys-dapp-template](https://github.com/rhodge-hash/roys-dapp-template)
+
+---
+
+## 🙏 Acknowledgments
+
+- [Best README Template](https://github.com/othneildrew/Best-README-Template)
+- [Radix UI](https://www.radix-ui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/rhodge-hash/roys-dapp-template.svg?style=for-the-badge
+[contributors-url]: https://github.com/rhodge-hash/roys-dapp-template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/rhodge-hash/roys-dapp-template.svg?style=for-the-badge
+[forks-url]: https://github.com/rhodge-hash/roys-dapp-template/network/members
+[stars-shield]: https://img.shields.io/github/stars/rhodge-hash/roys-dapp-template.svg?style=for-the-badge
+[stars-url]: https://github.com/rhodge-hash/roys-dapp-template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/rhodge-hash/roys-dapp-template.svg?style=for-the-badge
+[issues-url]: https://github.com/rhodge-hash/roys-dapp-template/issues
+[license-shield]: https://img.shields.io/github/license/rhodge-hash/roys-dapp-template.svg?style=for-the-badge
+[license-url]: https://github.com/rhodge-hash/roys-dapp-template/blob/main/LICENSE.txt

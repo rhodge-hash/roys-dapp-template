@@ -1,0 +1,26 @@
+{
+  "name": "backend-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node dist/server.js" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.1",
+    "@types/pg": "^8.15.5",
+    "@types/redis": "^4.0.10",
+    "@types/socket.io": "^3.0.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "redis": "^5.8.2",
+    "socket.io": "^4.8.1",
+    "typescript": "^5.9.2"
+  }
+}
